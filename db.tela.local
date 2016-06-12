@@ -1,0 +1,20 @@
+;
+; BIND data file for tela.local internal domain
+;
+$TTL	604800
+@	IN	SOA	tela.local. root.localhost. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	tela.local.
+@	IN	A	127.0.0.1
+@	IN	AAAA	::1
+
+; below are A record Addresses
+
+webserver	IN	A	10.0.1.60
+printer		IN	A	10.0.1.23
+webserver.tela.local 86400 A 10.0.1.60
